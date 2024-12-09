@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.login{
+    border: 1px solid red;
+    width: 100%;
+    box-sizing: border-box;   
+}
+.login img{
+    width: 45px;
+    margin: 20px 30px;
+    box-sizing: border-box;
+}
