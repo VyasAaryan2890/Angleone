@@ -4,12 +4,14 @@ import Login from './Login/Login';
 import Start from './Start/Start';
 
 function App() {
-  
+    
   return (
-      <Routes>
+    <div style={{ touchAction: 'none', userSelect: 'none', overflow: 'hidden' }}>
+      <Routes >
         <Route path="/" element={<Start />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      </div>
   );
 }
 
