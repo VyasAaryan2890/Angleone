@@ -182,3 +182,20 @@
         font-size: 14px;
     }
 }
+@media(max-width:326px){
+    .img div p {
+        font-size: 12px;
+    }
+    .img img{
+        aspect-ratio: 3/3;
+        object-fit: contain;
+        width: 250px;
+        height: 335px;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .img h1 {
+        font-size: 20px;
+        padding-bottom: 10px;
+        font-weight: 500;
+    }
+}
