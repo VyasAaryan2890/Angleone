@@ -59,6 +59,7 @@ form button{
     margin: 0px auto;
     margin-top: 30px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 form span{
     color: blue;
