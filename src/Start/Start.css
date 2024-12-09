@@ -42,7 +42,7 @@
     aspect-ratio: 3/3;
     object-fit: contain;
     width: 350px;
-    height: 320px;
+    height: 350px;
     transition: opacity 0.5s ease-in-out;
 }
 .img h1{
