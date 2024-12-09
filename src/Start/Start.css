@@ -149,6 +149,14 @@
         height: 335px;
         transition: opacity 0.5s ease-in-out;
     }
+    .img h1 {
+        font-size: 22px;
+        padding-bottom: 10px;
+        font-weight: 500;
+    }
+    .img div p {
+        font-size: 12px;
+    }
 }
 @media(max-width:400px){
     .btn .btn1,.btn2{
@@ -164,5 +172,13 @@
         width: 280px;
         height: 310px;
         transition: opacity 0.5s ease-in-out;
+    }
+    .img h1 {
+        font-size: 26px;
+        padding-bottom: 10px;
+        font-weight: 500;
+    }
+    .img div p {
+        font-size: 14px;
     }
 }
