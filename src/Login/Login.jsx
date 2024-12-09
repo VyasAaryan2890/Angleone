@@ -22,8 +22,8 @@ const Login = () => {
 
             <div className='form'>
                 <h3>Enter your mobile number</h3>
-                <div>
-                    <p>Mobile Number</p>
+                <div className='div'>
+                    <p className='mobile'>Mobile Number</p>
                     <div>
                         <form>
                             <div>
@@ -31,7 +31,7 @@ const Login = () => {
                                 <input type="number" required />
                             </div>
                             <button type='submit'>Next</button>
-                            <p>Cannot </p>
+                            <p>Cannot access? <span>Login via client id</span></p>
                         </form>
                     </div>
                 </div>
