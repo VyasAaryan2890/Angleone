@@ -135,7 +135,7 @@
         
     }
     .btn{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 100%;
     }
     .btn .btn1,.btn2{
@@ -147,5 +147,10 @@
         width: 280px;
         height: 335px;
         transition: opacity 0.5s ease-in-out;
+    }
+}
+@media(max-width:400px){
+    .btn .btn1,.btn2{
+        width: 42%;
     }
 }
