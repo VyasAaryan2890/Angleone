@@ -9,7 +9,7 @@ const Login = () => {
 
     // Function to handle the back button click
     const handleBackClick = () => {
-        navigate('/home'); // Navigate to the Start page (assumed to be the home page)
+        navigate('/'); // Navigate to the Start page (assumed to be the home page)
     };
 
     // Function to handle form submission
