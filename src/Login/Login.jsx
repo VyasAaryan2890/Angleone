@@ -1,30 +1,34 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './Login.css';
 import back from '../assets/back.jfif';
 
 const Login = () => {
     const navigate = useNavigate();
     const [mobileNumber, setMobileNumber] = useState('');
-    const [userName, setUserName] = useState(''); // State for storing the user's name
+    const [userName, setUserName] = useState('');
 
+    // Function to generate a 6-digit OTP
     const generateOtp = () => {
         return Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit OTP
     };
 
+    // Navigate back to the home page
     const handleBackClick = () => {
-        navigate('/'); // Navigate back to the home page
+        navigate('/');
     };
 
+    // Form submit handler
     const handleSubmit = (e) => {
         e.preventDefault();
 
         // Validate the mobile number
         if (/^\d{10}$/.test(mobileNumber)) {
             const otp = generateOtp(); // Generate OTP
-            alert(`Your OTP is: ${otp}`); // Show OTP to the user
-            // Navigate to Home.jsx with the mobile number, name, and OTP
-            navigate('/home', { state: { mobileNumber, userName, initialOtp: otp } });
+            alert(`Your OTP is: ${otp}`); // For testing, show OTP in an alert (replace with SMS/email in production)
+
+            // Pass userName to Lock.jsx
+            navigate('/home', { state: { userName,mobileNumber,otp} });
         } else {
             alert('Please enter a valid 10-digit mobile number!');
         }
@@ -42,7 +46,7 @@ const Login = () => {
             </div>
 
             <div className="form">
-                <h3>Enter your details</h3>
+                <h3>Enter your mobile number</h3>
                 <div className="div">
                     <p className="mobile">Mobile Number</p>
                     <div>
@@ -56,7 +60,7 @@ const Login = () => {
                                     required
                                 />
                             </div>
-                            <p style={{ marginTop: "40px" }}>Enter Name</p>
+                            <p style={{ marginTop: "20px" }}>Enter Name: </p>
                             <div style={{ marginTop: "0px" }}>
                                 <input
                                     type="text"
@@ -65,6 +69,7 @@ const Login = () => {
                                     required
                                 />
                             </div>
+
                             <button type="submit">Next</button>
                             <p>
                                 Cannot access? <span>Login via client ID</span>

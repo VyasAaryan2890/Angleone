@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.lockNav{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(41, 41, 151);
+    padding: 10px 25px;
+    z-index: 1;
+}
+.lockItems{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.lockItems img{
+    width:40px;
+    /* mix-blend-mode:color-burn; */
+    margin-right: 5px;
+}
+.lockItems h2{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* daynamic  */
+
+.userData{
+    /* border: 1px solid black; */
+    width: 100%;
+    background-color: #fff;
+    margin-top: -10px;
+    border-radius: 10px;
+    
+}
+.userData .user div{
+    width: 50px;
+    height: 10px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0px auto;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: rgb(229, 182, 165);
+    font-weight: 600;
+    color: antiquewhite;
+}
+.user{
+   margin-top: 18px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.user h3{
+   font-size: 30px;
+   font-weight: 600;
+   font-family:sans-serif;
+   margin-top: 5px;
+}
+
+.userData .pin{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px auto;
+}
+.pin p{
+    font-size: 22px;
+}
+.circle{
+    display: flex;
+    margin: 10px auto;
+    gap: 30px;
+
+}
+.pin .circle .dot{
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid black; */
+    border-radius: 100px;
+    background-color: rgb(232, 228, 228);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pin .forgot{
+    font-size: 20px;
+    margin-top:10px;
+}
+
+.userData .number div{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 6px;
+}
+
+
+.number div .box{
+    font-size: 25px;
+    padding: 10px;
+    width: 80px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    background-color: rgb(232, 228, 228);
+    border-radius: 5px;
+    
+}

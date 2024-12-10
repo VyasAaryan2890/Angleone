@@ -7,15 +7,18 @@ const Home = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const { mobileNumber, initialOtp } = location.state || { mobileNumber: "", initialOtp: "000000" };
+    // Get the userName and OTP data passed from Login.jsx
+    const { userName, mobileNumber, otp: initialOtp } = location.state || { userName: "", mobileNumber: "", otp: "000000" };
 
-    const [otp, setOtp] = useState(new Array(6).fill(""));
-    const [timer, setTimer] = useState(30);
-    const [currentOtp, setCurrentOtp] = useState(initialOtp);
-    const [expiredOtp, setExpiredOtp] = useState("");
+    const [otp, setOtp] = useState(new Array(6).fill("")); // State for OTP input fields
+    const [timer, setTimer] = useState(30); // Timer for OTP expiration
+    const [currentOtp, setCurrentOtp] = useState(initialOtp); // OTP to compare with
+
+    console.log("Received OTP in Home.jsx:", currentOtp); // Log the received OTP
+    console.log("User Name:", userName); // Log the userName for debugging
 
     const handleBackClick = () => {
-        navigate('/login');
+        navigate('/login'); // Navigate back to login page
     };
 
     const handleChange = (element, index) => {
@@ -24,18 +27,21 @@ const Home = () => {
         newOtp[index] = element.value;
         setOtp(newOtp);
 
+        // Move focus to the next input when user enters a digit
         if (element.value !== "" && element.nextSibling) {
             element.nextSibling.focus();
         }
     };
 
     const handleSubmit = () => {
-        const enteredOtp = otp.join("");
-        if (enteredOtp === currentOtp || enteredOtp === expiredOtp) {
+        const enteredOtp = otp.join(""); // Join the OTP input into a string
+        console.log("Entered OTP:", enteredOtp); // Log the OTP entered by the user
+
+        if (enteredOtp === currentOtp) {
             alert("Login Successfully");
-            navigate("/home1");
+            navigate("/lock", { state: { userName } }); // If OTP is correct, navigate to Lock screen
         } else {
-            alert("Invalid OTP");
+            alert("Invalid OTP"); // If OTP is incorrect, show an error
         }
     };
 
@@ -44,16 +50,14 @@ const Home = () => {
             const interval = setInterval(() => {
                 setTimer((prevTime) => prevTime - 1);
             }, 1000);
-            return () => clearInterval(interval);
+            return () => clearInterval(interval); // Cleanup interval when component unmounts
         } else {
-            const incrementedOtp = (parseInt(currentOtp) + 1).toString().padStart(6, '0');
-            setExpiredOtp(currentOtp);
-            setCurrentOtp(incrementedOtp);
-            alert(`OTP has expired. Your new OTP is: ${incrementedOtp}`);
-            setOtp(new Array(6).fill(""));
-            setTimer(30);
+            alert("OTP has expired!");
+            // Reset OTP fields when the timer expires
+            setOtp(new Array(6).fill("")); 
+            setTimer(30); // Reset the timer
         }
-    }, [timer, currentOtp]);
+    }, [timer]);
 
     return (
         <div>
