@@ -22,7 +22,7 @@ const Home1 = () => {
     };
 
     return (
-        <div>
+        <div className="main">
             <div className="Navigation">
                 <div className="navParent">
                     {/* code for navChild */}

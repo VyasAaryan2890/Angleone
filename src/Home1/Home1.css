@@ -6,8 +6,11 @@
     box-sizing: border-box;
 }
 
-body {
+.main{  
+    width: 100%;
+    box-sizing: border-box;
     background-color: rgb(238, 238, 238);
+    height: 100vh;
 }
 
 /* Navigation Bar */
@@ -15,6 +18,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     cursor: pointer;
+    
 }
 
 .Navigation .navChild {
@@ -80,7 +84,7 @@ body {
 }
 
 .ul li.active {
-    color: blue; /* Blue color for active text */
+    color: rgb(42, 42, 102); /* Blue color for active text */
 }
 
 .ul li.active::after {
@@ -90,7 +94,7 @@ body {
     bottom: -5px;
     width: 100%;
     height: 3px;
-    background-color: blue;
+    background-color: rgb(42, 42, 102);
     transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
     border-radius: 2px;
 }
@@ -139,5 +143,5 @@ body {
 }
 
 .iocn.activeIcon p {
-    color: blue; /* Changes the text color to blue */
+    color: rgb(42, 42, 102); /* Changes the text color to blue */
 }

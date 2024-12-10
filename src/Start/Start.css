@@ -14,7 +14,7 @@
     padding: 15px;
     position: sticky;
     top: 0;
-    background-color: #fff;
+    
 }
 .hero{
     /* border: 1px solid red; */
@@ -45,6 +45,7 @@
     width: 350px;
     height: 365px;
     transition: opacity 0.5s ease-in-out;
+   
 }
 .img h1{
     font-size: 30px;
@@ -60,6 +61,7 @@
     background-color: rgb(215, 210, 210);
     border: none;
     transition: 1s;
+
 }
 .hero .img .dot div:nth-child(1){
     background-color: gray;
