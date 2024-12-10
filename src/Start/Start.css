@@ -88,8 +88,8 @@
 }
 .btn .btn1{
     background-color: #fff;
-    border: 1px solid blue;
-    color: blue;
+    border: 1px solid rgb(31, 31, 99);
+    color: rgb(31, 31, 99);
     font-weight:600;
 }
 .btn .btn2{
