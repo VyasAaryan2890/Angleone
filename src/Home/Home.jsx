@@ -104,7 +104,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <button onClick={handleSubmit} style={{ marginTop: "260px" }}>
+        <button onClick={handleSubmit} style={{ marginTop: "285px" }}>
           Submit
         </button>
       </div>

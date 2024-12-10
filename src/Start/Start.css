@@ -93,9 +93,9 @@
     font-weight:600;
 }
 .btn .btn2{
-    background-color: blue;
+    background-color:rgb(31, 31, 99);
     color: #fff;
-    border:2px solid blue;
+    border:1px solid rgb(31, 31, 99);
     font-weight: 600;
 }
 
