@@ -1,0 +1,143 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+/* Navigation Bar */
+.Navigation {
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.Navigation .navChild {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.navChild div {
+    display: flex;
+    align-items: center;
+}
+
+.navChild div h1,
+.navChild div h2 {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0px 5px;
+}
+
+.navChild div h1 {
+    font-weight: 600;
+}
+
+.navChild ul {
+    display: flex;
+    gap: 15px;
+}
+
+.navChild img {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.navParent {
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: rgb(238, 238, 238);
+}
+
+.navParent .ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 15px;
+    background-color: #fff;
+    position: relative;
+}
+
+.ul li {
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    color: black; /* Default color for non-active items */
+    transition: color 0.3s ease, left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.ul li.active {
+    color: blue; /* Blue color for active text */
+}
+
+.ul li.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: blue;
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* Bottom Navigation */
+.navLast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.iocn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.iocn img {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    margin-bottom: 8px;
+    transition: filter 0.3s ease;
+}
+
+.iocn p {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: black;
+}
+
+/* Active Icon Styles */
+.iocn.activeIcon img {
+    filter: hue-rotate(200deg) brightness(1.2); /* Changes the icon color to blue */
+}
+
+.iocn.activeIcon p {
+    color: blue; /* Changes the text color to blue */
+}

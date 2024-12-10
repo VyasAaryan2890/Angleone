@@ -5,5 +5,5 @@
 }
 html, body {
  touch-action: none;
-overflow: hidden;
+/* overflow: hidden; */
 }
