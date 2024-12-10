@@ -18,10 +18,10 @@ const Login = () => {
 
         // Check if the entered mobile number matches the required number
         if (mobileNumber === '9409251163') {
-            alert('Login Successful!');
+            alert('Your OTP is 524589');
             navigate('/home'); // Navigate to the Start page
         } else {
-            alert('Invalid Mobile Number. Please try again.');
+            alert('Please try again!');
         }
     };
 
